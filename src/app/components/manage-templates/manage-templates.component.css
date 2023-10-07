@@ -1,0 +1,27 @@
+img {
+    width: 300px
+  }
+  .template{
+    width:300px;
+    height:200px;
+    border-radius:10% ;
+    display:inline;
+  background-color: rgb(237, 235, 235);
+  text-align:center;
+  color:#46b5e9;
+  }
+
+  input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+  width:280px;
+  height:180px;
+  border-radius:10px ;
+  display:inline;
+background-color: rgb(237, 235, 235);
+text-align:center;
+color:#46b5e9;
+ 
+  
+}

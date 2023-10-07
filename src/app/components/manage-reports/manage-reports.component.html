@@ -1,0 +1,52 @@
+<div class="main-content">
+
+        <div class="row">
+            <div class="col-md-3 mb-3 mt-4">
+                <b>Manage Reports</b>    
+            </div>
+            
+        </div>
+<div class="card">
+       <div class="table-responsive">
+           <table datatable class="table table-md row-border hover" style="font-family:Arial, Helvetica,sans-serif">
+               <thead class="tags" style="background-color:rgb(250, 245, 245);">
+                   <tr>
+                       <th>S.No</th>
+                       <th>Report Description</th>
+                       <th>Reported By</th>
+                       <th>Reportee Name</th>
+                       <th>Reported On</th>
+                       <th>Take Action</th>
+                      
+                   </tr>
+               </thead>
+               <tbody>
+                <tr class="tags"  *ngFor="let report of data;let i = index;">
+                    <td >{{i+1}}</td>
+                    <td>{{report.reason}}</td>
+                    <td>{{report.reportedBy.name}}</td>
+                    <td>{{report.reported.name}}</td>
+                    <td>{{report.createdAt | date}}</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-6 ">
+        
+                                <i class="fa fa-phone  fa-rotate-90" style="color:rgb(95, 194, 233)" aria-hidden="true"></i>
+                                
+                            
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-envelope" style="color:rgb(95, 194, 233)" aria-hidden="true"></i>
+                                
+                            </div>
+                        </div>
+</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+         </div> 
+         </div>
+     </div>
+
+ 

@@ -1,0 +1,28 @@
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-3 mt-3 mb-3">
+           <b>{{name}}</b>
+           </div>
+           <div class="col-md-8 mt-4">
+                
+                <i class="fa fa-pen" style="color:#35a4d7;float:right;font-size:13px;" (click)="toggleData()"><span style="font-family:sans-serif;" > Edit</span> </i>
+           </div>
+        </div>
+        
+                    <div *ngIf="dataShown" >
+                        <div class="bg-white shadow-sm p-3">
+                            <textarea cols="170" rows="10" id="rules"></textarea>
+                            <div class="row pt-5"  style="float:right;">
+                                <div class="col">
+                                    <button type="button" class="btn info">Cancel</button>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">update</button>
+                                </div>
+                    
+                    </div>
+                </div>
+                
+    </div>
+          </div>
+        

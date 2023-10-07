@@ -1,0 +1,39 @@
+<div class="main-content">
+    
+        <div class="row">
+            <div class="col-md-3 ml-4 mt-4">
+                <b>Manage Orders</b>    
+            </div>
+            
+        </div>
+      
+
+
+       <div class="table-responsive">
+           <table datatable class="table table-bordered table-sm row-border hover">
+               <thead style="background-color:rgb(250, 245, 245);">
+                   <tr>
+                       <th>Order ID#</th>
+                       <th>Ordered By</th>
+                       <th>Ordered To</th>
+                       <th>Ordered On</th>
+                       <th>Order Status</th>
+                      
+                   </tr>
+               </thead>
+               <tbody>
+                <tr *ngFor="let order of data;let i = index;">
+                    <td >{{order.id}}</td>
+                    <td>{{order.OrderedBy}}</td>
+                    <td>{{order.OrderedTo}}</td>
+                    <td>{{order.OrderedOn}}</td>
+                    <td [ngStyle]="{'color':getColor(order.OrderStatus)}">{{order.OrderStatus}}</td>
+                    
+                    </tr>
+                </tbody>
+            </table>
+         </div> 
+     </div>
+
+ 
+

@@ -1,0 +1,80 @@
+<div class="main-content">
+              
+    <div class="row">
+        <div class="col-md-3 ml-2 mt-4 mb-2">
+            <b>List of Users</b>    
+        </div>
+        
+    </div>
+
+<div class="card">
+   <div class="table-responsive">
+       <table  class="table  table-md row-border hover" style="text-align: center;font-family:Arial, Helvetica,sans-serif;font-size:14px;">
+           <thead style="background-color:rgb(250, 245, 245);">
+               <tr>
+                   <!-- <th>S.No</th> -->
+                   <th>Name of the User</th>
+                   <th>Mobile Number</th>
+                   <th>Email Address</th>
+                   <th>Company Name</th> 
+                   <th>Address</th>
+                   <th>Block/Unblock</th>
+                  
+                  
+               </tr>
+           </thead>
+           <tbody>
+            <tr class="table-content" *ngFor="let user of userData | paginate: { id: 'server', itemsPerPage: itemsPerPage, currentPage: page, totalItems: total } ">
+                <!-- <td >{{i+1}}</td> -->
+                <td>{{user.name}}</td>
+                <td>{{user.mob_no}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.company}}</td>
+                <td>{{user.address}}</td>
+                 <td (click)="isBlock()" style="color:rgb(57, 181, 230);cursor: pointer;">
+                    <span *ngIf="!user.isdeleted; else unblock">
+                        Block
+                    </span>
+                <ng-template #unblock>
+                  Unblock
+                </ng-template>
+                </td>
+                <!-- <td ng-click="toggle=!toggle"><span>{{block ? 'Block':'unblock'}}</span></td> -->
+                </tr>
+            </tbody>
+        </table>
+    
+      </div>   
+     </div> 
+     <br>
+     <div class="mx-auto" style="width: 25%;">
+  <pagination-controls (pageChange)="pageChange($event)" id="server"></pagination-controls> 
+</div>
+     <!-- <nav aria-label="...">
+        <ul class="pagination justify-content-center pagination-circle p-3">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true" class="circle"></span>&lt;
+              </a>
+        
+          </li>
+          <li class="page-item active"><a class="page-link" href="#"><span class="circle"></span>1</a></li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="#"> <span class="circle"></span>2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#"><span class="circle"></span>3</a></li>
+          <li class="page-item">
+            <li class="page-item" aria-current="page">
+              <a class="page-link" href="#"> <span class="circle"></span>4</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#"><span class="circle"></span>5</a></li>
+            <li class="page-item">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true" class="circle"></span>&gt;
+                </a>
+            
+          </li>
+        </ul>
+      </nav> -->
+ </div>

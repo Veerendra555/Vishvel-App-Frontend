@@ -1,0 +1,14 @@
+#modal {
+    position:  fixed;
+    width: 600px;
+    top: 40px;
+    left: calc(50% - 300px);
+    bottom: 40px;
+    z-index: 100;
+ }
+
+  .info {
+    border-color: #2196F3;
+    color: dodgerblue;
+  }
+  

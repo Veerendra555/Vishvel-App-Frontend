@@ -1,0 +1,25 @@
+.info {
+    border-color: #2196F3;
+    color: dodgerblue;
+  }
+  input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 2px solid rgba(67, 65, 65, 0.226);
+    border-style:dashed;
+    display: block;
+    padding: 15px 15px;
+  background-color: rgb(237, 235, 235);
+  text-align:center;
+  color:#2196F3;
+  
+}
+
+.tags{
+  font-size:10px;font-weight:bold;
+}
+
+span.a{
+  font-style: italic;
+}

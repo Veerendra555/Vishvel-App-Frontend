@@ -1,0 +1,113 @@
+
+
+<div class="main-content">
+ 
+    <div id="bg1">
+    
+               <div class="p-3 text-left">
+        <img src="../../../../assets/images/vishvellogo.png"> 
+    </div>
+        <div class="row justify-content-center align-items-center overall-ht-box ">
+        
+            <div class="col-md-6">
+             
+                <div class="card overall-contentblock">
+                    <div class="text-center mt-3">
+                        <b>Admin Login</b>
+                        <hr>
+                    </div>
+                    <div class="card-body">
+                        <div class="register-form">
+                            <form
+                              name="form"
+                              #f="ngForm"
+                              (ngSubmit)="f.form.valid"
+                              novalidate
+                            >
+                           
+                          
+                              <div class="form-group">
+                                <label>Email Address</label>
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  name="email"
+                                  [(ngModel)]="form.email"
+                                  required
+                                  email
+                                  #email="ngModel"
+                                  [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
+                                />
+                                <div *ngIf="f.submitted && email.errors" class="invalid-feedback">
+                                  <div *ngIf="email.errors['required']">Email is required</div>
+                                  <div *ngIf="email.errors['email']">Email is invalid</div>
+                                </div>
+                              </div>
+                          
+                              <div class="form-group">
+                                <label>Password</label>
+                                <input
+                                  type="password"
+                                  class="form-control"
+                                  name="password"
+                                  [(ngModel)]="form.password"
+                                  required
+                                  minlength="6"
+                                  maxlength="40"
+                                  #password="ngModel"
+                                  [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
+                                />
+                                <div *ngIf="f.submitted && password.errors" class="invalid-feedback">
+                                  <div *ngIf="password.errors['required']">Password is required</div>
+                                  <div *ngIf="password.errors['minlength']">
+                                    Password must be at least 6 characters
+                                  </div>
+                                  <div *ngIf="password.errors['maxlength']">
+                                    Username must not exceed 40 characters
+                                  </div>
+                                </div>
+                              </div>
+                          
+                              <div class="form-group form-check">
+                                <input
+                                  type="checkbox"
+                                  lass="form-control"
+                                  name="acceptTerms"
+                                  [(ngModel)]="form.acceptTerms"
+                                  class="form-check-input"
+                                  required
+                                  #acceptTerms="ngModel"
+                                  [ngClass]="{ 'is-invalid': f.submitted && acceptTerms.errors }"
+                                />
+                          
+                              <label for="acceptTerms" class="form-check-label">
+                                Remember me
+                              </label>
+                              </div>
+                             
+                              <div class="form-group">
+                                
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                
+                                
+                               <!--<button
+                                  type="button"
+                                  (click)="onReset(f)"
+                                  class="btn btn-warning float-right"
+                                >
+                                  Reset
+                                </button>-->
+                              </div>
+                              
+                            </form>
+                          
+                          </div>
+                     
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

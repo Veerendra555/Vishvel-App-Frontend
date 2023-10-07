@@ -1,0 +1,25 @@
+.page-content-header{
+    text-align:center;
+}
+
+.back{
+
+    background-color: rgba(170, 216, 243, 0.892);
+    
+    height:60px;
+    border-radius: 22%;
+    padding-top:20px;
+    text-align: center;
+    color:#039be5;
+    font-weight: bold;
+
+}
+
+.text{
+    color:#039be5;
+    font-size:12px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align:left;
+    align-items: center;
+}

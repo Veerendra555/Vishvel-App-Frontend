@@ -1,0 +1,18 @@
+div.card{
+    height:520px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.info {
+    border-color: #2196F3;
+    color: dodgerblue;
+  }
+
+  textarea
+{
+  width:100%;
+}
